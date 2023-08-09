@@ -1,0 +1,15 @@
+<p>product-listing works!</p>
+<!-- No use of async pipe when you hardcode with of -->
+
+<div *ngFor="let product of productsInStore"> 
+  {{ product.id}}. {{ product.name }} | {{ product.price}} 
+  <button (click)="addItemToCart(product)">Add me</button>
+  <button (click)="removeFromCart(product.id)">Remove me</button>
+</div>
+
+<div *ngFor="let cartItem of cart">
+  {{cartItem.product.name }} | {{cartItem.quantity}}
+  <button (click)="removeFromCart(cartItem.product.id)">Remove me</button>
+  <button (click)="update(cartItem.product.id, cartItem.quantity + 1)">+</button>
+  <button (click)="update(cartItem.product.id, cartItem.quantity - 1)">-</button>
+</div>
