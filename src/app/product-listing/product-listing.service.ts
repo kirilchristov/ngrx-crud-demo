@@ -15,8 +15,6 @@ export class ProductListingService {
 }
 
 
-
-
 // ---------------------- DEMO DATA
 const demoProductsList: Product[] = [
     {

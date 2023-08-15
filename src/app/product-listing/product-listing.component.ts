@@ -27,7 +27,6 @@ export class ProductListingComponent {
       .select(selectCartState)
       .subscribe((cartState: ShoppingCartItem[]) => {
         this.cart = cartState;
-        console.log('The cart', this.cart);
       });
   }
 
